@@ -1,5 +1,11 @@
 # @effect/ai-amazon-bedrock
 
+## 0.15.1
+
+### Patch Changes
+
+- [#6206](https://github.com/Effect-TS/effect/pull/6206) [`13c8207`](https://github.com/Effect-TS/effect/commit/13c82074fd183a118407d1c7574a9b060f71b4d5) Thanks @Zelys-DFKH! - `generateObject` no longer fails when extended thinking is configured via `withConfigOverride`. Anthropic's API rejects requests that set `thinking` in `additionalModelRequestFields` alongside a forced `toolChoice` — which `generateObject` always does. The fix strips `thinking` from `additionalModelRequestFields` in the `json` response format path before the request is sent.
+
 ## 0.15.0
 
 ### Patch Changes
